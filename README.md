@@ -111,7 +111,7 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
 
-At this point, the app runs at `http://127.0.0.1:8000/`. 
+At this point, the app runs at `http://localhost:8000/`. 
 
 <br />
 
@@ -129,7 +129,7 @@ ENV GITHUB_TOKEN <YOUR_TOKEN_HERE>
 $ docker-compose up --build
 ```
 
-At this point, the app runs at `http://127.0.0.1:5085/`. 
+At this point, the app runs at `http://localhost:5085/`. 
 
 <br />
 
