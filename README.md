@@ -21,7 +21,7 @@
 
 <br />
 
-![Django Dashboard - Argon Dashboard PRO, admin dashboard starter coded in Django.](https://raw.githubusercontent.com/app-generator/django-dashboard-argon-pro/master/media/django-dashboard-argon-pro-screen.png) 
+![Django Dashboard - Argon Dashboard PRO, admin dashboard starter coded in Django.](https://user-images.githubusercontent.com/51070104/218494367-4ea1810d-c4ed-4241-9c96-963ba48dfbe5.png)
 
 <br />
 
