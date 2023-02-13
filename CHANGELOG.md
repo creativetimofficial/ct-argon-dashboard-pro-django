@@ -1,5 +1,15 @@
 # Change Log
 
+## [1.0.2] 2023-02-13
+### Changes
+
+- Updated Codebase
+- Latest **[Django](https://appseed.us/admin-dashboards/django/)** Version
+- Theme-able UI (no more hardcoded inside the project)
+- Integrate [Django Theme Argon](https://github.com/app-generator/django-admin-argon-pro) - `PRO BS4 Version`
+  - Usable via `PIP`
+- CI/CD included via `Render`
+
 ## [1.0.1] 2021-09-20
 ### Improvements
 
