@@ -44,7 +44,7 @@
 
 > To authenticate use the default credentials ***test / PaSS_123*** or create a new user on the **registration page**.
 
-- **Black Dashboard PRO Django** [Login Page](https://www.creative-tim.com/live/argon-dashboard-pro-django)
+- **Argon Dashboard PRO Django** [Login Page](https://www.creative-tim.com/live/argon-dashboard-pro-django)
 
 <br />
 
@@ -133,9 +133,13 @@ At this point, the app runs at `http://localhost:5085/`.
 
 <br />
 
-## Documentation
+## `Documentation`
 
 The documentation for the **Argon Dashboard PRO Django** is hosted at our [website](https://demos.creative-tim.com/argon-dashboard-pro-django/docs/1.0/getting-started/getting-started-django.html).
+
+- 👉 [Argon PRO Django - How To Use It](https://www.youtube.com/watch?v=RCn5Fb18OUU) - `video presentation` 
+- 👉 [Argon PRO Django - Start in DOCKER](https://www.youtube.com/watch?v=-lZkVxhxKmc) - `video presentation`
+- 👉 [Argon PRO Django - Go LIVE](https://www.youtube.com/watch?v=bsWcW2CLbGU) - `video presentation`
 
 <br />
 
