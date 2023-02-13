@@ -2,16 +2,22 @@
 
  ![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/ct-argon-dashboard-pro-django.svg?maxAge=2592000)](https://github.com/creativetimofficial/ct-argon-dashboard-pro-django/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/ct-argon-dashboard-pro-django.svg?maxAge=2592000)](https://github.com/creativetimofficial/ct-argon-dashboard-pro-django/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
-**[Django Template](https://www.creative-tim.com/templates/django)** crafted on top of **Argon Dashboard PRO**, a premium Bootstrap 4 design. Start your development with a modern, dark-themed Bootstrap 4 Admin template for **Django**. It features a huge number of components built to fit together and look fantastic. If you want to code faster, with a smooth workflow, then you should try this template carefully developed with Django, a well-known Python Framework. **Django codebase** is crafted using a simple, modular structure that follows the best practices and provides authentication, database configuration, and deployment scripts for Docker and Gunicorn/Nginx stack. 
+**Django Template** crafted on top of **[Argon Dashboard PRO](https://www.creative-tim.com/product/argon-dashboard-pro-django)**, a premium **Bootstrap 4** design. Argon is a completly new product built on our newest re-built from scratch framework structure that is meant to make our products more intuitive, more adaptive and, needless to say, so much easier to customize.
 
-- Up-to-date dependencies: **Django 3.2.6 LTS**
-- [SCSS compilation](#recompile-css) via **Gulp**
-- UI Kit: **Argon Dashboard** (PRO Version)
-- Django Codebase - provided by **[AppSeed](https://appseed.us/)**
-- UI-Ready app, SQLite Database, Django Native ORM
-- Modular design, clean code-base
-- Session-Based Authentication, Forms validation
-- Deployment scripts: Docker, Gunicorn / Nginx
+> **NOTE**: This product `requires a License` in order to access the theme. During the purchase, a `GitHub Access TOKEN` is provided. 
+
+<br />
+
+## Features: 
+
+- ✅ `Up-to-date Dependencies`
+- ✅ `Design`: [Django Theme Argon](https://github.com/app-generator/django-admin-argon-pro) - `PRO BS4 Version`
+- ✅ `Sections` covered by the design:
+  - ✅ **Admin section** (reserved for superusers)
+  - ✅ **Authentication**: `Django.contrib.AUTH`, Registration
+  - ✅ **All Pages** available in for ordinary users 
+- ✅ `Docker`
+- 🚀 Deployment: `CI/CD` flow via `Render`
 
 <br />
 
@@ -36,48 +42,99 @@
 
 ## Demo
 
-> To authenticate use the default credentials ***test / ApS12_ZZs8*** or create a new user on the **registration page**.
+> To authenticate use the default credentials ***test / PaSS_123*** or create a new user on the **registration page**.
 
-- **Argon Dashboard PRO Django** [Login Page](https://www.creative-tim.com/live/argon-dashboard-pro-django)
+- **Black Dashboard PRO Django** [Login Page](https://www.creative-tim.com/live/argon-dashboard-pro-django)
 
 <br />
 
 ## Quick start
 
-> UNZIP the sources or clone the private repository. After getting the code, open a terminal and navigate to the working directory, with product source code.
+> UNZIP the sources or clone this repository. After getting the code, open a terminal and navigate to the working directory, with product source code.
+
+<br />
+
+> Export `GITHUB_TOKEN` in the environment. The value is provided during purchase. 
+
+This is required because the project has a private REPO dependency: `github.com/app-generator/priv-django-admin-black-pro`
 
 ```bash
-$ cd <SOURCE_CODE>
-$
-$ # Virtualenv modules installation (Unix based systems)
-$ virtualenv env
-$ source env/bin/activate
-$
-$ # Virtualenv modules installation (Windows based systems)
-$ # virtualenv env
-$ # .\env\Scripts\activate
-$
-$ # Install modules - SQLite Storage
-$ pip3 install -r requirements.txt
-$
-$ # Create tables
-$ python manage.py makemigrations
-$ python manage.py migrate
-$
-$ # Start the application (development mode)
-$ python manage.py runserver # default port 8000
-$
-$ # Start the app - custom port
-$ # python manage.py runserver 0.0.0.0:<your_port>
-$
-$ # Access the web app in browser: http://127.0.0.1:8000/
+$ export GITHUB_TOKEN='TOKEN_HERE'  # for Linux, Mac
+$ set GITHUB_TOKEN='TOKEN_HERE'     # Windows CMD
+$ $env:GITHUB_TOKEN = 'TOKEN_HERE'  # Windows powerShell 
 ```
 
-> Note: To use the app, please access the registration page and create a new user. After authentication, the app will unlock the private pages.
+<br />
+
+> 👉 Install modules via `VENV`.
+
+
+```bash
+$ virtualenv env
+$ source env/bin/activate
+$ pip install -r requirements.txt
+```
+
+<br />
+
+> 👉 Edit the `.env` using the template `.env.sample`. 
+
+```env
+
+# True for development, False for production
+DEBUG=True
+
+```
+
+<br />
+
+> 👉 Set Up Database
+
+```bash
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
+<br />
+
+> 👉 Create the Superuser
+
+```bash
+$ python manage.py createsuperuser
+```
+
+<br />
+
+> 👉 Start the app
+
+```bash
+$ python manage.py runserver
+```
+
+At this point, the app runs at `http://127.0.0.1:8000/`. 
+
+<br />
+
+## Start In Docker
+
+> 👉 Edit `Dockerfile` to set `GITHUB_TOKEN` in the Environment. Important: don't SHARE or commit the value on GitHub (is automatically invalidated)
+
+```Docker
+ENV GITHUB_TOKEN <YOUR_TOKEN_HERE>
+```
+
+> 👉 Start the app 
+
+```bash
+$ docker-compose up --build
+```
+
+At this point, the app runs at `http://127.0.0.1:5085/`. 
 
 <br />
 
 ## Documentation
+
 The documentation for the **Argon Dashboard PRO Django** is hosted at our [website](https://demos.creative-tim.com/argon-dashboard-pro-django/docs/1.0/getting-started/getting-started-django.html).
 
 <br />
@@ -89,131 +146,95 @@ The project is coded using a simple and intuitive structure presented bellow:
 ```bash
 < PROJECT ROOT >
    |
-   |-- core/                               # Implements app configuration
-   |    |-- settings.py                    # Defines Global Settings
-   |    |-- wsgi.py                        # Start the app in production
-   |    |-- urls.py                        # Define URLs served by all apps/nodes
+   |-- core/                            
+   |    |-- settings.py                  # Project Configuration  
+   |    |-- urls.py                      # Project Routing
    |
-   |-- apps/
-   |    |
-   |    |-- home/                          # A simple app that serve HTML files
-   |    |    |-- views.py                  # Serve HTML pages for authenticated users
-   |    |    |-- urls.py                   # Define some super simple routes  
-   |    |
-   |    |-- authentication/                # Handles auth routes (login and register)
-   |    |    |-- urls.py                   # Define authentication routes  
-   |    |    |-- views.py                  # Handles login and registration  
-   |    |    |-- forms.py                  # Define auth forms (login and register) 
-   |    |
-   |    |-- static/
-   |    |    |-- <css, JS, images>         # CSS files, Javascripts files
-   |    |
-   |    |-- templates/                     # Templates used to render pages
-   |         |-- includes/                 # HTML chunks and components
-   |         |    |-- navigation.html      # Top menu component
-   |         |    |-- sidebar.html         # Sidebar component
-   |         |    |-- footer.html          # App Footer
-   |         |    |-- scripts.html         # Scripts common to all pages
-   |         |
-   |         |-- layouts/                   # Master pages
-   |         |    |-- base-fullscreen.html  # Used by Authentication pages
-   |         |    |-- base.html             # Used by common pages
-   |         |
-   |         |-- accounts/                  # Authentication pages
-   |         |    |-- login.html            # Login page
-   |         |    |-- register.html         # Register page
-   |         |
-   |         |-- home/                      # UI Kit Pages
-   |              |-- index.html            # Index page
-   |              |-- 404-page.html         # 404 page
-   |              |-- *.html                # All other pages
+   |-- home/
+   |    |-- views.py                     # APP Views 
+   |    |-- urls.py                      # APP Routing
+   |    |-- models.py                    # APP Models 
+   |    |-- tests.py                     # Tests  
+   |    |-- templates/                   # Theme Customisation 
+   |         |-- includes                # 
+   |              |-- custom-footer.py   # Custom Footer      
+   |     
+   |-- requirements.txt                  # Project Dependencies
    |
-   |-- requirements.txt                     # Development modules - SQLite storage
-   |
-   |-- .env                                 # Inject Configuration via Environment
-   |-- manage.py                            # Start the app - Django default start script
+   |-- env.sample                        # ENV Configuration (default values)
+   |-- manage.py                         # Start the app - Django default start script
    |
    |-- ************************************************************************
 ```
 
 <br />
 
-> The bootstrap flow
+## How to Customize 
 
-- Django bootstrapper `manage.py` uses `core/settings.py` as the main configuration file
-- `core/settings.py` loads the app magic from `.env` file
-- Redirect the guest users to Login page
-- Unlock the pages served by *app* node for authenticated users
+When a template file is loaded, `Django` scans all template directories starting from the ones defined by the user, and returns the first match or an error in case the template is not found. 
+The theme used to style this starter provides the following files: 
+
+```bash
+# This exists in ENV: LIB/admin_argon_pro
+< UI_LIBRARY_ROOT >                      
+   |
+   |-- templates/                     # Root Templates Folder 
+   |    |          
+   |    |-- accounts/       
+   |    |    |-- login.html           # Sign IN Page
+   |    |    |-- register.html        # Sign UP Page
+   |    |
+   |    |-- includes/       
+   |    |    |-- footer.html          # Footer component
+   |    |    |-- sidebar.html         # Sidebar component
+   |    |    |-- navigation.html      # Navigation Bar
+   |    |    |-- scripts.html         # Scripts Component
+   |    |
+   |    |-- layouts/       
+   |    |    |-- base.html            # Masterpage
+   |    |    |-- base-auth.html       # Masterpage for Auth Pages
+   |    |
+   |    |-- pages/       
+   |         |-- index.html           # Dashboard Page
+   |         |-- profile.html         # Profile Page
+   |         |-- *.html               # All other pages
+   |    
+   |-- ************************************************************************
+```
+
+When the project requires customization, we need to copy the original file that needs an update (from the virtual environment) and place it in the template folder using the same path. 
+
+> For instance, if we want to **customize the footer.html** these are the steps:
+
+- ✅ `Step 1`: create the `templates` DIRECTORY inside the `home` app
+- ✅ `Step 2`: configure the project to use this new template directory
+  - `core/settings.py` TEMPLATES section
+- ✅ `Step 3`: copy the `footer.html` from the original location (inside your ENV) and save it to the `home/templates` DIR
+  - Source PATH: `<YOUR_ENV>/LIB/admin_argon_pro/template/includes/footer.html`
+  - Destination PATH: `<PROJECT_ROOT>home/templates/includes/footer.html`
+
+> To speed up all these steps, the **codebase is already configured** (`Steps 1, and 2`) and a `custom footer` can be found at this location:
+
+`home/templates/includes/custom-footer.html` 
+
+By default, this file is unused because the `theme` expects `footer.html` (without the `custom-` prefix). 
+
+In order to use it, simply rename it to `footer.html`. Like this, the default version shipped in the library is ignored by Django. 
+
+In a similar way, all other files and components can be customized easily.
 
 <br />
 
-## Recompile CSS
+## Deploy on [Render](https://render.com/)
 
-To recompile SCSS files, follow this setup:
+- Create a Blueprint instance
+  - Go to https://dashboard.render.com/blueprints this link.
+- Click `New Blueprint Instance` button.
+- Connect your `repo` which you want to deploy.
+- Fill the `Service Group Name` and click on `Update Existing Resources` button.
+- After that your deployment will start automatically.
 
-<br />
-
-**Step #1** - Install tools
-
-- [NodeJS](https://nodejs.org/en/) 12.x or higher
-- [Gulp](https://gulpjs.com/) - globally 
-    - `npm install -g gulp-cli`
-- [Yarn](https://yarnpkg.com/) (optional) 
-
-<br />
-
-**Step #2** - Change the working directory to `assets` folder
-
-```bash
-$ cd apps/static/assets
-```
-
-<br />
-
-**Step #3** - Install modules (this will create a classic `node_modules` directory)
-
-```bash
-$ npm install
-// OR
-$ yarn
-```
-
-<br />
-
-**Step #4** - Edit & Recompile SCSS files 
-
-```bash
-$ gulp scss
-```
-
-The generated file is saved in `static/assets/css` directory.
-
-<br /> 
-
-## Deployment
-
-The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
-
-### [Docker](https://www.docker.com/) execution
----
-
-The application can be easily executed in a docker container. The steps:
-
-> Get the code
-
-UNZIP the sources or clone the private repository. After getting the code, open a terminal and navigate to the working directory, with product source code.
-
-```bash
-$ cd <SOURCE_CODE>
-```
-
-> Start the app in Docker
-
-```bash
-$ sudo docker-compose pull && sudo docker-compose build && sudo docker-compose up -d
-```
-
-Visit `http://localhost:85` in your browser. The app should be up & running.
+At this point, the product should be LIVE.
 
 <br />
 
