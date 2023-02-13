@@ -1,5 +1,14 @@
 # Change Log
 
+## [1.0.3] 2023-02-13
+### Changes
+
+> DOCS Update (`video materials`)
+
+- 👉 [Argon PRO Django - How To Use It](https://www.youtube.com/watch?v=RCn5Fb18OUU) - `video presentation` 
+- 👉 [Argon PRO Django - Start in DOCKER](https://www.youtube.com/watch?v=-lZkVxhxKmc) - `video presentation`
+- 👉 [Argon PRO Django - Go LIVE](https://www.youtube.com/watch?v=bsWcW2CLbGU) - `video presentation`
+
 ## [1.0.2] 2023-02-13
 ### Changes
 
